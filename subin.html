@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+    #header:hover{
+        background-color: black;
+        color:yellow;
+    }
+    #header{
+      background-color:red;
+      border-radius: 20px 20px 20px 20px;
+      width:800px;
+      color:blue;
+    }
+
+    ul#nav, ul.sub1{
+        list-style-type: none;
+    }
+    
+    ul#nav li{
+        width:125px;
+        text-align:center;
+        position:relative;
+        float:left;
+    }
+    
+    ul#nav a{
+        text-decoration:none;
+        display:block;
+        width:125px;
+        height:25px;
+    }
+    
+    ul#nav li .sub1 li {
+        border:1px solid green;
+        visibility:hidden;
+    }
+    ul#nav li:hover a {
+        visibility:visible;
+    }
+</style>
+
+
+<script>
+
+window.onload = function()
+{
+    var clock = document.getElementById('clock');
+
+setInterval(function() {
+  var now = new Date();
+  var target = new Date('4/21/2018 18:00:00');
+  var answer = (target.getTime()-now.getTime())/(1000*60);
+  answer = parseInt(answer.toString(),0);
+  clock.innerHTML = answer;
+}, 1000); 
+
+var header = document.getElementById('header');
+
+header.onclick = function(){
+    header.style.color="white";
+};
+
+};
+
+</script>
+  </head>
+  <body>
+
+    <div id="header">
+    <font size="7"><center><B>웹프로그래밍 중간고사</B></center></font>
+    <div style="text-align:right; color:white;">시험 종료까지 남은 시간 : <span id="clock"></span>분</div>
+
+    </div>
+
+    <ul id="nav">
+        <li><a href="#">HTML</a>
+            <ul class="sub1">
+              <li><a href="#">풀다운 메뉴</a></li>
+              <li><a href="#">풀다운 메뉴</a></li>
+              <li><a href="#">풀다운 메뉴</a></li>
+              <li><a href="#">풀다운 메뉴</a></li>
+            </ul>
+        </li>
+        <li><a href="#">JAVASCRIPT</a>
+            <ul class="sub1">
+                <li><a href="#">풀다운 메뉴</a></li>
+                <li><a href="#">풀다운 메뉴</a></li>
+            </ul>
+        </li>
+        <li><a href="#">CSS</a>
+        <ul class="sub1">
+            <li>
+                <a href="#">풀다운 메뉴</a>
+            </li>
+        </ul>
+       </li>
+       <li><a href="">jQuery</a>
+       <ul class="sub1">
+          <li><a href="#">풀다운 메뉴</a></li>
+          <li><a href="#">풀다운 메뉴</a></li>
+          <li><a href="#">풀다운 메뉴</a></li>
+        </ul>
+        </li>
+    </ul>
+    <br>
+    <br>
+    <div style="margin-left:100px;">
+    <h3>웹프로그래밍 소개</h3>
+    <p>HTML+JAVASCRIPT+CSS+jQuery</p>
+
+    <h3>웹프로그래밍 소개</h3>
+    <p>HTML+JAVASCRIPT+CSS+jQuery</p>
+
+    <h3>웹프로그래밍 소개</h3>
+    <p>HTML+JAVASCRIPT+CSS+jQuery</p>
+
+    <h3>웹프로그래밍 수업 일정</h3>
+    <p>HTML 1주</p>
+    <p>JAVASCRIT 2주</p>
+    <p>CSS 2주</p>
+    <p>jQuery 2주</p>
+
+    <h3>웹프로그래밍 수업 일정</h3>
+    <p>HTML 1주</p>
+    <p>JAVASCRIT 2주</p>
+    <p>CSS 2주</p>
+    <p>jQuery 2주</p>
+
+    <h3>웹프로그래밍 수업 일정</h3>
+    <p>HTML 1주</p>
+    <p>JAVASCRIT 2주</p>
+    <p>CSS 2주</p>
+    <p>jQuery 2주</p>
+    </div>
+    <form>
+      <table>
+        <tr>
+          <td>명령</td>
+          <td><input type="text" name="order"></td>
+          <td>
+            <select>
+            <optgroup label="최근 3년">
+                <option value="2017">2017년</option>
+                <option value="2016">2016년</option>
+                <option value="2015">2015년</option>
+            </optgroup>
+            <optgroup label="미래">
+                <option value="2018">2018년</option>
+                <option value="2019">2019년</option>
+                <option value="2020">2020년</option>
+            </optgroup>
+            </select>
+        </td>
+          <td><button type="submit">확인</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <h3>사이드 메뉴</h3>
+    <p>메뉴</p>
+    <p>메뉴</p>
+    <p>메뉴</p>
+    <p>메뉴</p>
+
+    <div style="background-color:orange; width:100px; position: fixed; left: 900px; top: 10px;">
+        <h3>고정 메뉴</h3>
+            <p>메뉴</p>
+            <p>메뉴</p>
+            <p>메뉴</p>
+            <p>메뉴</p>
+            <p>메뉴</p>
+    </div>
+
+
+    <p><I><a href="http://www.yu.ac.kr">영남대학교</a> 기계IT대학 <a href="http://www.yu.ac.kr">컴퓨터공학과</a></I></p>
+    <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+</audio>
+  </body>
+</html>
