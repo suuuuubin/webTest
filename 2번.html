@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>2017웹프중간</title>
+		<style media="screen">
+			body, ul, li, p, div, h3{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			#header{
+				color: blue;
+				width: 800px;
+				height: 70px;
+				background: red;
+				border-radius: 15px;
+			}
+			#header:hover{
+				background: black;
+				color: white;
+			}
+			#header:active{
+				background: black;
+				color: yellow;
+			}
+			#timer{
+				position: absolute;
+				top: 65px; left: 530px;
+				color: white;
+			}
+			#header:active > #timer{
+				color: yellow;
+			}
+			#main{
+				background: yellow;
+				padding-left: 200px;
+				width: 600px;
+			}
+			#sidemenu{
+				position: absolute;
+				top: 134px; left: 0px;
+				background-color: green;
+				width: 200px; height: 110px;
+			}
+			#sidemenu > h3{
+				color: white;
+			}
+			#fixedmenu{
+				position:fixed;
+				top: 100px;
+				left: 900px;
+				background-color: orange;
+				width: 100px; height: 130px;
+			}
+			#homepage{
+				position: absolute;
+				left: 530px;
+			}
+			#logoimg{
+				text-align: center;
+			}
+			ul#menu > li{
+				display: inline-block;
+				float: left;
+			}
+			ul#menu > li:first-child{
+				border-radius: 10px 0px 0px 10px;
+			}
+			ul#menu > li:last-child{
+				border-radius: 0px 10px 10px 0px;
+			}
+			ul#menu > li:nth-child(2n){
+				background-color: red;
+			}
+			ul#menu > li:nth-child(2n+1){
+				background-color: green;
+			}
+			li > a{
+				display: block;
+				padding: 10px 10px;
+				color: blue;
+				text-decoration: none;
+			}
+			li:hover{
+				background-color: black;
+			}
+			li:hover > a{
+				color: blue;
+			}
+			li:hover > ul{
+				display: block;
+				background-color: white;
+				width: 120px;
+				z-index: 100;
+			}
+			li{
+				position: relative;
+			}
+			li > ul{
+				position: absolute;
+				top: 100%;
+			}
+			ul ul{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header" align="center">
+			<h1>웹프로그래밍 중간고사</h1>
+			<div id="timer">
+				<h3>시험 종료까지 남은 시간 :</h3>
+			</div>
+		</div>
+		<!-- 풀다운 메뉴 -->
+			<ul id="menu">
+				<li type="disk">
+					<a href="#">HTML</a>
+					<ul id="smenu">
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+					</ul>
+				</li>
+				<li type="disk">
+					<a href="#">JAVASCRIPT</a>
+					<ul id="smenu">
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+					</ul>
+				</li>
+				<li type="disk">
+					<a href="#">CSS</a>
+					<ul id="smenu">
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+					</ul>
+				</li>
+				<li type="disk">
+					<a href="#">jQuery</a>
+					<ul id="smenu">
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+						<li type="circle">풀다운 메뉴</li>
+					</ul>
+				</li>
+			</ul>
+			<br />
+			<br />
+		<div id="main">
+			<!-- 웹프로그래밍 소개 -->
+			<p><h3>웹프로그래밍 소개</h3></p>
+			<p>HTML + JAVASCRIPT + CSS + jQuery</p>
+			<p><h3>웹프로그래밍 소개</h3></p>
+			<p>HTML + JAVASCRIPT + CSS + jQuery</p>
+			<p><h3>웹프로그래밍 소개</h3></p>
+			<p>HTML + JAVASCRIPT + CSS + jQuery</p><br>
+			<!-- 웹프로그래밍 수업 일정 -->
+			<p><h3>웹프로그래밍 수업 일정</h3></p>
+			<p>HTML 1주</p>
+			<p>JAVASCRIPT 2주</p>
+			<p>CSS 2주</p>
+			<p>jQuery 2주</p>
+			<p><h3>웹프로그래밍 수업 일정</h3></p>
+			<p>HTML 1주</p>
+			<p>JAVASCRIPT 2주</p>
+			<p>CSS 2주</p>
+			<p>jQuery 2주</p>
+			<p><h3>웹프로그래밍 수업 일정</h3></p>
+			<p>HTML 1주</p>
+			<p>JAVASCRIPT 2주</p>
+			<p>CSS 2주</p>
+			<p>jQuery 2주</p><br />
+			<!-- 명령 form -->
+			<form>
+				<label for="command">명령&nbsp</label>
+				<input type="text" />
+				<select style="width:80px">
+					<option value="2018">2018년</option>
+				</select>
+				<input type="submit" value="확인" /><br />
+			</form>
+		</div>
+		<div id="sidemenu">
+			<!-- 사이드 메뉴 -->
+			<p><h3>사이드 메뉴</h3></p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+		</div>
+		<div id="fixedmenu">
+			<!-- 고정메뉴 -->
+			<p><h3>고정메뉴</h3></p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+			<p>메뉴</p>
+		</div>
+		<div id="homepage">
+			<i><a href="http://www.yu.ac.kr">영남대학교</a> 기계IT대학 <a href="http://cse.yu.ac.kr">컴퓨터공학과</a></i>
+		</div>
+		<audio src="music.mp3" controls="controls"></audio>
+		<div id="logoimg">
+			<img src="http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png" />
+		</div>
+	</body>
+</html>
