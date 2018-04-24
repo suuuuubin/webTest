@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>2017웹프중간</title>
-		<style media="screen">
+		<style>
 			body, ul, li, p, div, h3{
 				padding: 0;
 				margin: 0;
@@ -26,7 +26,7 @@
 			}
 			#timer{
 				position: absolute;
-				top: 65px; left: 530px;
+				top: 65px; left: 510px;
 				color: white;
 			}
 			#header:active > #timer{
@@ -74,18 +74,18 @@
 				display: inline-block;
 				float: left;
 			}
-			ul#menu > li:first-child{
+			ul#menu > li:first-child {
 				border-radius: 10px 0px 0px 10px;
 			}
-			ul#menu > li:last-child{
+			ul#menu > li:last-child {
 				border-radius: 0px 10px 10px 0px;
 			}
-			ul#menu > li:nth-child(2n){
+			ul#menu > li:nth-child(2n) {
 				border-style: dotted;
 				border-color: green;
 				background-color: red;
 			}
-			ul#menu > li:nth-child(2n+1){
+			ul#menu > li:nth-child(2n+1) {
 				border-style: dotted;
 				border-color: red;
 				background-color: green;
@@ -121,19 +121,147 @@
 				display: none;
 			}
 		</style>
+		<script>
+			var answer = 90;
+			window.onload = function(){
+			var clock = document.getElementById('clock');
+			clock.innerHTML = answer;
+			ref = setInterval(des, 1000);
+			};
+			function des()
+			{
+				if(answer == 0)
+				{
+					alert("종료");
+					clearInterval(ref);
+				}
+				else
+				{
+						answer -= 1;
+						clock.innerHTML = answer;
+				}
+
+				var webintro1 = document.getElementById("webintro1");
+				var webintro2 = document.getElementById("webintro2");
+				var webintro3 = document.getElementById("webintro3");
+				var wls1 = document.getElementById("wls1");
+				var wls2 = document.getElementById("wls2");
+				var wls3 = document.getElementById("wls3");
+				webintro1.onclick = function(){
+					if(webintro1.style.color == "red")
+					{
+						webintro1.style.color = "black"
+					}
+					else
+					{
+						webintro1.style.color = "red"
+					}
+				}
+				webintro2.onclick = function(){
+					if(webintro2.style.color == "red")
+					{
+						webintro2.style.color = "black"
+					}
+					else
+					{
+						webintro2.style.color = "red"
+					}
+				}
+				webintro3.onclick = function(){
+					if(webintro3.style.color == "red")
+					{
+						webintro3.style.color = "black"
+					}
+					else
+					{
+						webintro3.style.color = "red"
+					}
+				}
+
+				wls1.onclick = function(){
+					wls1_1.style.color = "red";
+					wls2_1.style.color = "black";
+					wls3_1.style.color = "black";
+				}
+				wls2.onclick = function(){
+					wls1_1.style.color = "black";
+					wls2_1.style.color = "red";
+					wls3_1.style.color = "black";
+				}
+				wls3.onclick = function(){
+					wls1_1.style.color = "black";
+					wls2_1.style.color = "black";
+					wls3_1.style.color = "red";
+				}
+			};
+
+				function execution(){
+					var header = document.getElementById("header");
+					var input = document.getElementById("command").value;
+						if(input == "웹프로그래밍1")
+						{
+							webintro1.style.color = "red";
+							webintro2.style.color = "black";
+							webintro3.style.color = "black";
+						}
+						else if(input == "웹프로그래밍2")
+						{
+							webintro1.style.color = "black";
+							webintro2.style.color = "red";
+							webintro3.style.color = "black";
+						}
+						else if(input == "웹프로그래밍3")
+						{
+							webintro1.style.color = "black";
+							webintro2.style.color = "black";
+							webintro3.style.color = "red";
+						}
+						else if(input == "웹프로그래밍일정1")
+						{
+							wls1_1.style.color = "red";
+							wls2_1.style.color = "black";
+							wls3_1.style.color = "black";
+						}
+						else if(input == "웹프로그래밍일정2")
+						{
+							wls1_1.style.color = "black";
+							wls2_1.style.color = "red";
+							wls3_1.style.color = "black";
+						}
+						else if(input == "웹프로그래밍일정3")
+						{
+							wls1_1.style.color = "black";
+							wls2_1.style.color = "black";
+							wls3_1.style.color = "red";
+						}
+						else if(input == "녹색")
+						{
+							header.style.backgroundColor = "green";
+						}
+						else if(input == "초기화")
+						{
+							header.style.backgroundColor = "red";
+						}
+						else
+						{
+							alert("없는 명령");
+						}
+					};
+
+		</script>
 	</head>
 	<body>
 		<div id="header" align="center">
 			<h1>웹프로그래밍 중간고사</h1>
 			<div id="timer">
-				<h3>시험 종료까지 남은 시간 :</h3>
+				<h3>시험 종료까지 남은 시간 : <span id="clock"></span>분</h3>
 			</div>
 		</div>
 		<!-- 풀다운 메뉴 -->
 			<ul id="menu">
 				<li type="disk">
 					<a href="#">HTML</a>
-					<ul id="smenu">
+					<ul>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
@@ -142,14 +270,14 @@
 				</li>
 				<li type="disk">
 					<a href="#">JAVASCRIPT</a>
-					<ul id="smenu">
+					<ul>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
 					</ul>
 				</li>
 				<li type="disk">
 					<a href="#">CSS</a>
-					<ul id="smenu">
+					<ul>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
@@ -158,7 +286,7 @@
 				</li>
 				<li type="disk">
 					<a href="#">jQuery</a>
-					<ul id="smenu">
+					<ul>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
 						<li type="circle">풀다운 메뉴</li>
@@ -169,32 +297,39 @@
 			<br />
 		<div id="main">
 			<!-- 웹프로그래밍 소개 -->
-			<p><h3>웹프로그래밍 소개</h3></p>
+			<p><h3 id="webintro1">웹프로그래밍 소개</h3></p>
 			<p>HTML + JAVASCRIPT + CSS + jQuery</p>
-			<p><h3>웹프로그래밍 소개</h3></p>
+			<p><h3 id="webintro2">웹프로그래밍 소개</h3></p>
 			<p>HTML + JAVASCRIPT + CSS + jQuery</p>
-			<p><h3>웹프로그래밍 소개</h3></p>
+			<p><h3 id="webintro3">웹프로그래밍 소개</h3></p>
 			<p>HTML + JAVASCRIPT + CSS + jQuery</p><br>
 			<!-- 웹프로그래밍 수업 일정 -->
-			<p><h3>웹프로그래밍 수업 일정</h3></p>
-			<p>HTML 1주</p>
-			<p>JAVASCRIPT 2주</p>
-			<p>CSS 2주</p>
-			<p>jQuery 2주</p>
-			<p><h3>웹프로그래밍 수업 일정</h3></p>
-			<p>HTML 1주</p>
-			<p>JAVASCRIPT 2주</p>
-			<p>CSS 2주</p>
-			<p>jQuery 2주</p>
-			<p><h3>웹프로그래밍 수업 일정</h3></p>
-			<p>HTML 1주</p>
-			<p>JAVASCRIPT 2주</p>
-			<p>CSS 2주</p>
-			<p>jQuery 2주</p><br />
+			<p><h3 id="wls1">웹프로그래밍 수업 일정</h3></p>
+			<span id="wls1_1">
+				<p>HTML 1주</p>
+				<p>JAVASCRIPT 2주</p>
+				<p>CSS 2주</p>
+				<p>jQuery 2주</p>
+			</span>
+			<p><h3 id="wls2">웹프로그래밍 수업 일정</h3></p>
+			<span id="wls2_1">
+				<p>HTML 1주</p>
+				<p>JAVASCRIPT 2주</p>
+				<p>CSS 2주</p>
+				<p>jQuery 2주</p>
+			</span>
+			<p><h3 id="wls3">웹프로그래밍 수업 일정</h3></p>
+			<span id="wls3_1">
+				<p>HTML 1주</p>
+				<p>JAVASCRIPT 2주</p>
+				<p>CSS 2주</p>
+				<p>jQuery 2주</p>
+			</span>
+			<br />
 			<!-- 명령 form -->
 			<form>
 				<label for="command">명령&nbsp</label>
-				<input type="text" />
+				<input id="command" type="text" />
 				<select style="width:80px">
 					<optgroup label="최근 3년">
 						<option value="2018">2018년</option>
@@ -207,7 +342,7 @@
 						<option value="2021">2021년</option>
 					</optgroup>
 				</select>
-				<input type="submit" value="확인" /><br />
+				<button type="button" onclick="execution();">확인</button><br />
 			</form>
 		</div>
 		<div id="sidemenu">
@@ -231,7 +366,7 @@
 			<i><a href="http://www.yu.ac.kr" style="text-decoration: none;">영남대학교</a> 기계IT대학 <a href="http://cse.yu.ac.kr" style="text-decoration: none;">컴퓨터공학과</a></i>
 		</div>
 		<div id="music">
-			<audio src="music.mp3" type="audio/mp3" controls></audio>
+			<audio src="music.mp3" type="audio/mp3" loop autoplay controls></audio>
 		</div>
 		<div id="logoimg">
 			<img src="http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png" />
