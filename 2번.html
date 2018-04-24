@@ -140,7 +140,6 @@
 						answer -= 1;
 						clock.innerHTML = answer;
 				}
-
 				var webintro1 = document.getElementById("webintro1");
 				var webintro2 = document.getElementById("webintro2");
 				var webintro3 = document.getElementById("webintro3");
@@ -177,7 +176,6 @@
 						webintro3.style.color = "red"
 					}
 				}
-
 				wls1.onclick = function(){
 					wls1_1.style.color = "red";
 					wls2_1.style.color = "black";
@@ -194,7 +192,6 @@
 					wls3_1.style.color = "red";
 				}
 			};
-
 				function execution(){
 					var header = document.getElementById("header");
 					var input = document.getElementById("command").value;
@@ -240,14 +237,13 @@
 						}
 						else if(input == "초기화")
 						{
-							header.style.backgroundColor = "red";
+							header.style.backgroundColor = "";
 						}
 						else
 						{
 							alert("없는 명령");
 						}
 					};
-
 		</script>
 	</head>
 	<body>
