@@ -127,7 +127,6 @@
 			var clock = document.getElementById('clock');
 			clock.innerHTML = answer;
 			ref = setInterval(des, 60000);
-			};
 			function des()
 			{
 				if(answer == 0)
@@ -140,6 +139,7 @@
 						answer -= 1;
 						clock.innerHTML = answer;
 				}
+			}
 				var webintro1 = document.getElementById("webintro1");
 				var webintro2 = document.getElementById("webintro2");
 				var webintro3 = document.getElementById("webintro3");
@@ -192,9 +192,16 @@
 					wls3_1.style.color = "red";
 				}
 			};
+
 				function execution(){
 					var header = document.getElementById("header");
 					var input = document.getElementById("command").value;
+					var webintro1 = document.getElementById("webintro1");
+					var webintro2 = document.getElementById("webintro2");
+					var webintro3 = document.getElementById("webintro3");
+					var wls1 = document.getElementById("wls1");
+					var wls2 = document.getElementById("wls2");
+					var wls3 = document.getElementById("wls3");
 						if(input == "웹프로그래밍1")
 						{
 							webintro1.style.color = "red";
