@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>21311828 신송정</title>
+    <style>
+    body{
+      width: 800px;
+    }
+    #header{
+      background-color : red;
+      color : blue;
+      border-radius: 15px 15px 15px 15px;
+      width : 800px;
+    }
+    #sheader{
+      color:white;
+      text-align: right;
+    }
+    #header:hover{
+      background-color: black;
+      color:white;
+    }
+    #header:active h2{
+      color:yellow;
+    }
+    #header:active{
+      color:yellow;
+    }
+    nav, ul, li {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav {
+      text-align: left;
+
+    }
+    nav > ul {
+      display: inline-block;
+      text-align: center;
+    }
+
+    nav > ul > li {
+      display: inline-block;
+    }
+    nav li > span > a {
+      display: block;
+      text-decoration: none;
+      color : blue;
+    }
+    nav li > a {
+      text-decoration: none;
+      color:black;
+    }
+
+    nav li > span#html {
+      display: block;
+      padding: 10px;
+      border-style: dotted;
+      border-color: red;
+      border-radius: 20px 0px 0px 20px;
+      background-color: green;
+    }
+
+
+    nav li > span#js {
+      display: block;
+      padding: 10px;
+      border-style: dotted;
+      border-color: green;
+
+      background-color: red;
+    }
+    nav li > span#css {
+      display: block;
+      padding: 10px;
+      border-style: dotted;
+      border-color: red;
+
+      background-color: green;
+    }
+    nav li > span#jquery {
+      display: block;
+      padding: 10px;
+      border-style: dotted;
+      border-color: green;
+      border-radius: 0px 20px 20px 0px;
+      background-color: red;
+    }
+
+    nav li:hover {
+      background-color: white;
+    }
+    nav li:hover > ul {
+      display: block;
+    }
+
+    nav li {
+      position: relative;
+      width: 100px;
+    }
+
+    nav li > ul {
+      position: absolute;
+    }
+
+    nav ul ul {
+      display: none;
+      background-color: white;
+    }
+    #intro{
+      background-color: yellow;
+    }
+    #subintro{
+      margin-left: 300px;
+    }
+    #leftbar{
+      background : green;
+      position: fixed;
+      left:0px; top:100px; bottom: 680px;
+      width : 150px;
+    }
+    #rightbar{
+      background : orange;
+      position: fixed;
+      left:900px; top:100px; bottom: 670px;
+      width : 120px;
+    }
+    #side{
+      color:white;
+    }
+    #yuimg{
+      text-align : center;
+    }
+    img{
+      bottom :0px;
+    }
+
+    </style>
+  <script>
+  window.onload = function(){
+    var clock = document.getElementById('clock');
+    setInterval(function() {
+    var now = new Date();
+    var target = new Date('4/24/2018 20:00:00');
+    var answer = (target.getTime()-now.getTime())/(1000*60);
+    answer = parseInt(answer.toString(),0);
+    clock.innerHTML = answer;
+  }, 1000);
+    var wintro1 = document.getElementById('wintro1');
+    var wintro2 = document.getElementById('wintro2');
+    var wintro3 = document.getElementById('wintro3');
+    var wcintro1 = document.getElementById('wcintro1');
+    var wcintro2 = document.getElementById('wcintro2');
+    var wcintro3 = document.getElementById('wcintro3');
+    wintro1.onclick=function(){
+      wintro1.style.color="red";
+    };
+    wintro2.onclick=function(){
+      wintro2.style.color="red";
+    };
+    wintro3.onclick=function(){
+      wintro3.style.color="red";
+    };
+    wcintro1.onclick=function(){
+      wcs1.style.color="red";
+      wcs2.style.color="black";
+      wcs3.style.color="black";
+    };
+    wcintro2.onclick=function(){
+      wcs1.style.color="black";
+      wcs2.style.color="red";
+      wcs3.style.color="black";
+    };
+    wcintro3.onclick=function(){
+      wcs1.style.color="black";
+      wcs2.style.color="black";
+      wcs3.style.color="red";
+    };
+  };
+
+  function proceed(){
+    var input = document.getElementById("command").value;
+    var wintro1 = document.getElementById('wintro1');
+    var wintro2 = document.getElementById('wintro2');
+    var wintro3 = document.getElementById('wintro3');
+    var wcintro1 = document.getElementById('wcintro1');
+    var wcintro2 = document.getElementById('wcintro2');
+    var wcintro3 = document.getElementById('wcintro3');
+     if(input == '웹프로그래밍1')
+      {
+        wintro1.style.color="red";
+        wintro2.style.color="black";
+        wintro3.style.color="black";
+      }
+      else if(input == '웹프로그래밍2')
+       {
+         wintro2.style.color="red";
+         wintro1.style.color="black";
+         wintro3.style.color="black";
+       }
+       else if(input == '웹프로그래밍3')
+        {
+          wintro3.style.color="red";
+          wintro2.style.color="black";
+          wintro1.style.color="black";
+        }
+        else if(input == '웹프로그래밍일정1')
+         {
+             wcs1.style.color="red";
+             wcs2.style.color="black";
+             wcs3.style.color="black";
+           }
+         else if(input == '웹프로그래밍일정2')
+          {
+              wcs1.style.color="black";
+              wcs2.style.color="red";
+              wcs3.style.color="black";
+            }
+          else if(input == '웹프로그래밍일정3')
+           {
+               wcs1.style.color="black";
+               wcs2.style.color="black";
+               wcs3.style.color="red";
+             }
+           else if(input == '녹색')
+            {
+              var header = document.getElementById('header');
+              header.style.backgroundColor = "green";
+            }
+            else if(input == '초기화')
+             {
+               var header = document.getElementById('header');
+               header.style.backgroundColor = "";
+               // background 초기화는 ""
+             }
+             else
+             {
+               alert("없는 명령");
+             }
+      };
+
+  </script>
+  </head>
+
+  <body>
+  <div id = "header">
+    <font size="5"><center><h1>웹프로그래밍 중간고사</h1></center></font>
+    <h2 id = "sheader">시험종료까지 남은시간 : <span id = "clock"></span>분</h2>
+  </div>
+
+  <div id="fullDown">
+   <nav>
+     <ul id="nav">
+         <li><span id ="html"><a href="#">HTML</a></span>
+           <ul class="sub1">
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+           </ul>
+         </li>
+
+         <li><span id ="js"><a href="#">JAVASCRIPT</a></span>
+           <ul class="sub1">
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+           </ul>
+         </li>
+
+         <li><span id ="css"><a href="#">CSS</a></span>
+           <ul class="sub1">
+             <li>
+               <a href="#">풀다운 메뉴</a>
+             </li>
+           </ul>
+         </li>
+
+          <li><span id ="jquery"><a href="">jQuery</a></span>
+           <ul class="sub1">
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+             <li><a href="#">풀다운 메뉴</a></li>
+           </ul>
+         </li>
+       </ul>
+
+   </nav>
+   </div>
+
+<div id = "intro">
+  <div id = "subintro">
+    <h2 id ="wintro1">웹프로그래밍 소개</h2>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+
+    <h2 id ="wintro2">웹프로그래밍 소개</h2>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+
+    <h2 id ="wintro3">웹프로그래밍 소개</h2>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+
+    <h2 id ="wcintro1">웹프로그래밍 수업 일정</h2>
+    <p id ="wcs1">HTML 1주<BR><BR>JAVASCRIPT 2주<BR><BR>CSS 2주<BR><BR> jQuery 2주<BR></p>
+
+    <h2 id ="wcintro2">웹프로그래밍 수업 일정</h2>
+    <p id ="wcs2">HTML 1주<BR><BR>JAVASCRIPT 2주<BR><BR>CSS 2주<BR><BR> jQuery 2주<BR></p>
+
+    <h2 id ="wcintro3">웹프로그래밍 수업 일정</h2>
+    <p id ="wcs3">HTML 1주<BR><BR>JAVASCRIPT 2주<BR><BR>CSS 2주<BR><BR> jQuery 2주<BR></p>
+
+    <form>
+        <tr>
+          <td>명령 <input type="text" id ="command"/>
+          <select>
+            <optgroup label ="최근3년">
+            <option>2017년</option>
+            <option>2016년</option>
+            <option>2015년</option>
+          </optgroup>
+          <optgroup label ="미래">
+          <option>2018년</option>
+          <option>2019년</option>
+          <option>2020년</option>
+        </optgroup>
+          </select>
+          <button type = "button" onclick="proceed();">확인</button>
+        </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  </div>
+  <div id = leftbar>
+    <h2 id= "side">사이드 메뉴</h2>
+    <p>메뉴<BR>메뉴<BR>메뉴<BR>메뉴</p>
+    </div>
+    <div id = rightbar>
+    <h2>고정 메뉴</h2>
+    <p>메뉴<BR>메뉴<BR>메뉴<BR>메뉴<BR>메뉴</p>
+    </div>
+    <p><i><a href = "http://www.yu.ac.kr">영남대학교</a>기계IT대학
+      <a href = "http://cse.yu.ac.kr">컴퓨터공학과 </i></p>
+    <audio src="music.mp3" controls = "controls"></audio>
+    <div id = "yuimg">
+    <p><img src = "http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png"/></p>
+  </div>
+  </body>
+</html>
