@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>21311860 정현동</title>
+
+    <style>
+
+      .header {
+        background-color: red;
+        border-radius: 30px;
+        padding: 1px;
+        margin:0px;
+      }
+      .header h1.title{
+        margin-top:1px;
+        color: blue;
+        text-align: center;
+
+      }
+      .header h3.time {
+        color: white;
+        text-align: right;
+        margin-bottom: 1px;
+      }
+
+      .header:hover {
+        background-color: black;
+      }
+
+      .header:hover h1, .header:hover h3{
+        color: white;
+      }
+
+      .header:active h1, .header:active h3 {
+        color: yellow;
+      }
+      * {
+        margin: 1px;
+        padding: 1px;
+      }
+      .container {
+        width: 800px;
+          background: yellow;
+          margin-top: 0px;
+          margin-left: 0px;
+          padding-top: 0px;
+          margin-left: 0px;
+          position: relative;
+          z-index: 1;
+      }
+      .content1 {
+        position: relative;
+        left: 200px;
+        z-index: 3;
+      }
+
+      .sideMenu {
+        position: absolute;
+        top:0px;
+        left: 0px;
+        background-color: green;
+        margin: 0px;
+        padding: 0px;
+        width: 190px;
+        z-index: 3;
+      }
+
+      aside {
+        position: fixed;
+        left: 800px;
+        top: 100px;
+        background-color: #fac017;
+        overflow: hidden;
+        width: 120px;
+        height: 200px;
+        z-index: 5;
+      }
+
+      nav, ul, li {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav > ul {
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav > ul > li {
+        display: inline-block;
+        float:left;
+      }
+      nav li {
+        /*position: relative;*/
+        width: 100px;
+      }
+      nav li > ul {
+         position: absolute;
+      }
+
+      nav > ul ul {
+        display: none;
+      }
+      nav li > span > a {
+        /*display: block; */
+        text-decoration: none;
+      }
+
+      nav li > span#html {
+        display: block;
+        padding: 10px;
+        border-style: dotted;
+        border-color: red;
+        border-radius: 20px 0px 0px 20px;
+        background-color: green;
+      }
+
+      nav li > span#js {
+        display: block;
+        padding: 10px;
+        border-style: dotted;
+        border-color: green;
+        background-color: red;
+      }
+
+      nav li > span#css {
+        display: block;
+        padding: 10px;
+        border-style: dotted;
+        border-color: red;
+        background-color: green;
+      }
+
+      nav li > span#jquery {
+        display: block;
+        padding: 10px;
+        border-style: dotted;
+        border-color: green;
+        border-radius: 0px 20px 20px 0px;
+        background-color: red;
+      }
+
+      nav li:hover {
+        background-color: white;
+      }
+
+      nav li:hover > ul {
+        display: block;
+        z-index: 5;
+      }
+
+    </style>
+    <script>
+      window.onload = function(){
+        var clock = document.getElementById('clock');
+        setInterval(function() {
+        var now = new Date();
+        var target = new Date('4/26/2018 16:00:00');
+        var answer = (target.getTime()-now.getTime())/(1000*60);
+        answer = parseInt(answer.toString(),0);
+        clock.innerHTML = answer;
+      }, 1000);
+
+
+      var title_0 = document.getElementById('title_0');
+      var title_1 = document.getElementById('title_1');
+      var title_2 = document.getElementById('title_2');
+
+      title_0.onclick = function(){
+        if(title_0.style.color=="red"){
+          title_0.style.color="black";
+        }
+        else{
+          title_0.style.color="red";
+        }
+      }
+
+      title_1.onclick = function(){
+        if(title_1.style.color=="red"){
+          title_1.style.color="black";
+        }
+        else{
+          title_1.style.color="red";
+        }
+      }
+
+      title_2.onclick = function(){
+        if(title_2.style.color=="red"){
+          title_2.style.color="black";
+        }
+        else{
+          title_2.style.color="red";
+        }
+      }
+
+
+    };
+
+
+      function foc(){
+        var input = document.getElementById("input").value;
+        var title_0= document.getElementById('title_0');
+        var title_1= document.getElementById('title_1');
+        var title_2= document.getElementById('title_2');
+        var sch_0 = document.getElementById('sch_0');
+        var sch_1 = document.getElementById('sch_1');
+        var sch_2 = document.getElementById('sch_2');
+
+        if(input=='웹프로그래밍1'){
+          title_0.style.color="red";
+          title_1.style.color="black";
+          title_2.style.color="black";
+          sch_0.style.color="black";
+          sch_1.style.color="black";
+          sch_2.style.color="black";
+        }
+        else if(input=='웹프로그래밍2'){
+          title_0.style.color="black";
+          title_1.style.color="red";
+          title_2.style.color="black";
+          sch_0.style.color="black";
+          sch_1.style.color="black";
+          sch_2.style.color="black";
+        }
+        else if(input=='웹프로그래밍3'){
+          title_0.style.color="black";
+          title_1.style.color="black";
+          title_2.style.color="red";
+          sch_0.style.color="black";
+          sch_1.style.color="black";
+          sch_2.style.color="black";
+        }
+        else if(input=='웹프로그래밍일정1'){
+          title_0.style.color="black";
+          title_1.style.color="black";
+          title_2.style.color="black";
+          sch_0.style.color="red";
+          sch_1.style.color="black";
+          sch_2.style.color="black";
+        }
+        else if(input=='웹프로그래밍일정2'){
+          title_0.style.color="black";
+          title_1.style.color="black";
+          title_2.style.color="black";
+          sch_0.style.color="black";
+          sch_1.style.color="red";
+          sch_2.style.color="black";
+        }
+        else if(input=='웹프로그래밍일정3'){
+          title_0.style.color="black";
+          title_1.style.color="black";
+          title_2.style.color="black";
+          sch_0.style.color="black";
+          sch_1.style.color="black";
+          sch_2.style.color="red";
+        }
+        else if(input=='녹색'){
+          document.getElementsByClassName('header').style.backgroundColor="green";
+        }
+        else if(input=='초기화'){
+          document.getElementsByClassName('header').style.backgroundColor="";
+        }
+        else {
+          alert("없는 명령");
+        }
+
+      };
+
+    </script>
+  </head>
+  <body style="width:800px;">
+    <div class="header">
+      <h1 class="title">웹프로그래밍 중간고사</h1>
+      <h3 class="time">시험 종료까지 남은 시간 : <span id = "clock"></span>분</h3>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <span id="html"><a href="#">HTML</a></span>
+          <ul>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+          </ul>
+        </li>
+        <li>
+          <span id="js"><a href="#">JAVASCRIT</a></span>
+          <ul>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+          </ul>
+        </li>
+
+        <li>
+          <span id="css"><a href="#">CSS</a></span>
+          <ul>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+          </ul>
+        </li>
+
+        <li>
+          <span id="jquery"><a href="#">jQuery</a></span>
+          <ul>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+            <li>풀다운 메뉴</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="content1">
+      <div class="intro">
+        <div class="intro_0">
+          <p><h3 id="title_0">웹 프로그래밍 소개</h3></p>
+          <p id="content_0">HTML + JAVASCRIT + CSS + jQuery</p>
+        </div>
+
+        <div class="intro_1">
+          <p><h3 id="title_1">웹 프로그래밍 소개</h3></p>
+          <p id="content_1">HTML + JAVASCRIT + CSS + jQuery</p>
+        </div>
+
+        <div class="intro_2">
+          <p><h3 id="title_2">웹 프로그래밍 소개</h3></p>
+          <p id="content_2">HTML + JAVASCRIT + CSS + jQuery</p>
+        </div>
+
+      </div>
+
+      <div class="plan">
+        <div>
+          <p><h3 id="plan_0">웹프로그래밍 수업 일정</h3></p>
+          <p id="sch_0">HTML 1주 <br> JAVASCRIPT 2주 <br> CSS 2주 <br> jQuery 2주</p>
+        </div>
+        <div>
+          <p><h3 id="plan_1">웹프로그래밍 수업 일정</h3></p>
+          <p id="sch_1">HTML 1주 <br> JAVASCRIPT 2주 <br> CSS 2주 <br> jQuery 2주</p>
+        </div>
+        <div>
+          <p><h3 id="plan_2">웹프로그래밍 수업 일정</h3></p>
+          <p id="sch_2">HTML 1주 <br> JAVASCRIPT 2주 <br> CSS 2주 <br> jQuery 2주</p>
+        </div>
+
+      </div>
+
+      <div class="input">
+        <form>
+          <label for="command">명령</label>
+          <input type="text" id="input">
+          <select>
+            <optgroup label="최근 3년">
+              <option value="2018">2018년</option>
+              <option value="2017">2017년</option>
+              <option value="2016">2016년</option>
+            </optgroup>
+            <optgroup label="미래">
+              <option value="2019">2019년</option>
+              <option value="2020">2020년</option>
+              <option value="2021">2021년</option>
+            </optgroup>
+          </select>
+          <button type="button" onclick="foc();">확인</button>
+        </form>
+
+      </div>
+      </div>
+
+      <div class="sideMenu">
+        <p><h3>사이드 메뉴</h3></p>
+        <p>메뉴</p>
+        <p>메뉴</p>
+        <p>메뉴</p>
+        <p>메뉴</p>
+      </div>
+    </div>
+
+
+    <div class="bottom" style="width:800px; ">
+      <audio controls>
+        <source src="music.mp3" type="audio/mp3">
+      </audio>
+      <h5 style="float:right; margin-top:2px;"><I><a href="http://www.yu.ac.kr">영남대학교</a> 기계IT대학 <a href="http://www.yu.ac.kr">컴퓨터공학과</a></I></h5>
+    </div>
+
+    <aside>
+      <p><h3>고정 메뉴</h3></p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+    </aside>
+    <footer>
+      <div id = "yuimg">
+      <p style="text-align: center;"><img src = "http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png"/></p>
+    </div>
+    </footer>
+  </body>
+</html>
