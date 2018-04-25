@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>웹프로그래밍 중간고사</title>
+    <style>
+      body { width:800px; }
+      #header{
+        width:800px; height:80px;
+        background-color: red;
+        color:blue;
+        border-radius: 10px;
+        text-align: center;
+        margin:0;
+      }
+      #header > h3{
+        color:white;
+        text-align: right;
+        margin:0;
+      }
+      #header > h1 {
+        margin:0;
+      }
+      #header:hover {
+        background-color: black;
+        color:white;
+        text-shadow: 5px 5px 10px white;
+      }
+      #header:active {
+        background-color: black;
+        color:yellow;
+        text-shadow: 5px 5px 10px yellow;
+      }
+      /*-----------------------------------------*/
+      #pulldown{
+        overflow: hidden;
+        margin:0;
+        padding:0;
+      }
+      #pulldown > li{
+        border-style: dashed;
+        border-width: 3px;
+        list-style: none;
+        padding:5px;
+        float: left;
+      }
+      #pulldown a {
+        font-weight: bold;
+        color:blue;
+        text-decoration: none;
+      }
+      #pulldown > li:first-child{
+        border-radius: 10px 0 0 10px;
+      }
+      #pulldown > li:last-child{
+        border-radius: 0 10px 10px 0;
+      }
+      #pulldown > li:nth-child(2n+1) {
+        background-color: green;
+        border-color : red;
+      }
+      #pulldown > li:nth-child(2n) {
+        background-color: red;
+        border-color: green;
+      }
+      #pulldown > li:nth-child(1):hover ul {
+        display: block;
+        position: absolute;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        left : 8px; top : 120px;
+        font-weight: bold;
+      }
+      #pulldown > li:nth-child(2):hover ul {
+        display: block;
+        position: absolute;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        left : 70px; top : 120px;
+        font-weight: bold;
+      }
+      #pulldown > li:nth-child(3):hover ul {
+        display: block;
+        position: absolute;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        left : 180px; top : 120px;
+        font-weight: bold;
+      }
+      #pulldown > li:nth-child(4):hover ul {
+        display:block;
+        position: absolute;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        left: 225px; top : 120px;
+        font-weight: bold;
+      }
+      #list1{
+        display : none;
+      }
+      #list2{
+        display : none;
+      }
+      #list3{
+        display : none;
+      }
+      #list4{
+        display : none;
+      }
+      /*-----------------------------------------*/
+      #middle {
+        overflow: hidden;
+        background: yellow;
+      }
+      #left {
+        background-color: green;
+        width : 200px;
+        float:left;
+      }
+      #left > h3 {
+        color:white;
+        margin:0;
+      }
+      #left > p {
+        margin:0;
+      }
+      #right {
+        float:left;
+      }
+      #right > h3 {
+        margin : 0;
+      }
+      #right p{
+        margin : 0;
+      }
+      /*-----------------------------------------*/
+      #bot {
+        overflow: hidden;
+      }
+      #bot > span {
+        float:right;
+      }
+      /*-----------------------------------------*/
+      #fixedbar {
+        background-color: orange;
+        position:fixed;
+        width : 100px;
+        left : 800px;
+        top : 100px;
+      }
+      #fixedbar > h3 {
+        margin : 0;
+      }
+      #fixedbar > p {
+        margin : 0;
+      }
+      /*-----------------------------------------*/
+      @media screen {
+        body {background-color: white;}
+      }
+      @media print {
+        body {background-color: green;}
+      }
+    </style>
+    <script>
+      window.onload = function() {
+
+        var clock = document.getElementById('clock');
+        var dday = new Date('4/26/2018 03:00:00');
+        setInterval(function () {
+          var time = new Date();
+          var interval = (dday-time)/(1000*60);
+          interval = parseInt(interval.toString(),0);
+          clock.textContent = interval;
+
+        },1000);
+
+        /////////////////////////////////////////////////
+        var introduce1 = document.getElementById('introduce1');
+        var introduce2 = document.getElementById('introduce2');
+        var introduce3 = document.getElementById('introduce3');
+
+        introduce1.onclick = function() {
+          if(introduce1.style.color == 'black')
+          {
+            introduce1.style.color = 'red';
+          }
+          else
+          {
+            introduce1.style.color = 'black';
+          }
+        }
+        introduce2.onclick = function() {
+          if(introduce2.style.color == 'black')
+          {
+            introduce2.style.color = 'red';
+          }
+          else
+          {
+            introduce2.style.color = 'black';
+          }
+        }
+        introduce3.onclick = function() {
+          if(introduce3.style.color == 'black')
+          {
+            introduce3.style.color = 'red';
+          }
+          else
+          {
+            introduce3.style.color = 'black';
+          }
+        }
+        /////////////////////////////////////////////////
+        var schedule1 = document.getElementById('schedule1');
+        var schedule2 = document.getElementById('schedule2');
+        var schedule3 = document.getElementById('schedule3');
+        var scheduleList1 = document.getElementById('scheduleList1');
+        var scheduleList2 = document.getElementById('scheduleList2');
+        var scheduleList3 = document.getElementById('scheduleList3');
+
+        schedule1.onclick = function() {
+          scheduleList1.style.color = 'red';
+          scheduleList2.style.color = 'black';
+          scheduleList3.style.color = 'black';
+        }
+        schedule2.onclick = function() {
+          scheduleList1.style.color = 'black';
+          scheduleList2.style.color = 'red';
+          scheduleList3.style.color = 'black';
+        }
+        schedule3.onclick = function() {
+          scheduleList1.style.color = 'black';
+          scheduleList2.style.color = 'black';
+          scheduleList3.style.color = 'red';
+        }
+        ////////////////////////////////////////////////////
+        var btn = document.getElementById('btn');
+        var order = document.getElementById('order');
+        var header = document.getElementById('header');
+        btn.onclick = function() {
+          if(order.value == '웹프로그래밍1')
+          {
+            introduce1.style.color = 'red';
+            introduce2.style.color = 'black';
+            introduce3.style.color = 'black';
+          }
+          else if(order.value == '웹프로그래밍2')
+          {
+            introduce1.style.color = 'black';
+            introduce2.style.color = 'red';
+            introduce3.style.color = 'black';
+          }
+          else if(order.value == '웹프로그래밍3')
+          {
+            introduce1.style.color = 'black';
+            introduce2.style.color = 'black';
+            introduce3.style.color = 'red';
+          }
+          else if(order.value == '웹프로그래밍일정1')
+          {
+            scheduleList1.style.color = 'red';
+            scheduleList2.style.color = 'black';
+            scheduleList3.style.color = 'black';
+          }
+          else if(order.value == '웹프로그래밍일정2')
+          {
+            scheduleList1.style.color = 'black';
+            scheduleList2.style.color = 'red';
+            scheduleList3.style.color = 'black';
+          }
+          else if(order.value == '웹프로그래밍일정3')
+          {
+            scheduleList1.style.color = 'black';
+            scheduleList2.style.color = 'black';
+            scheduleList3.style.color = 'red';
+          }
+          else if(order.value == '녹색')
+          {
+            header.style.backgroundColor ='green';
+          }
+          else if(order.value == '초기화')
+          {
+            header.style.backgroundColor ="";
+          }
+          else
+          {
+            alert('없는 명령');
+          }
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>웹프로그래밍 중간고사</h1>
+      <h3>시험 종료까지 남은 시간 : <span id="clock"></span> 분</h3>
+    </div>
+    <ul id="pulldown">
+      <li>
+        <a href="#">HTML</a>
+        <ul id="list1">
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">JAVASCRIPT</a>
+        <ul id="list2">
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">CSS</a>
+        <ul id="list3">
+          <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">jQuery</a>
+        <ul id="list4">
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+          <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+    </ul>
+    <div id="middle">
+      <div id="left">
+        <h3>사이드 메뉴</h3>
+        <p>메뉴</p>
+        <p>메뉴</p>
+        <p>메뉴</p>
+        <p>메뉴</p>
+      </div>
+      <div id="right">
+        <h3 id="introduce1">웹프로그래밍 소개</h3>
+        <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+        <h3 id="introduce2">웹프로그래밍 소개</h3>
+        <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+        <h3 id="introduce3">웹프로그래밍 소개</h3>
+        <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+        <br />
+        <h3 id="schedule1">웹프로그래밍 수업 일정</h3>
+        <div id="scheduleList1">
+          <p>HTML 1주</p>
+          <p>JAVASCRIPT 2주</p>
+          <p>CSS 2주</p>
+          <p>jQuery 2주</p>
+        </div>
+        <h3 id="schedule2">웹프로그래밍 수업 일정</h3>
+        <div id="scheduleList2">
+          <p>HTML 1주</p>
+          <p>JAVASCRIPT 2주</p>
+          <p>CSS 2주</p>
+          <p>jQuery 2주</p>
+        </div>
+        <h3 id="schedule3">웹프로그래밍 수업 일정</h3>
+        <div id="scheduleList3">
+          <p>HTML 1주</p>
+          <p>JAVASCRIPT 2주</p>
+          <p>CSS 2주</p>
+          <p>jQuery 2주</p>
+        </div>
+        <br />
+        <form>
+          <table>
+            <tr>
+              <td><laber for="order">명령</label></td>
+              <td><input id="order" type="text" name="order"/></td>
+              <td>
+                <select>
+                  <optgroup label="최근 3년">
+                    <option>2017년</option>
+                    <option>2016년</option>
+                    <option>2015년</option>
+                  </optgroup>
+                  <optgroup label="미래">
+                    <option>2018년</option>
+                    <option>2019년</option>
+                    <option>2020년</option>
+                  </optgroup>
+                </select>
+              </td>
+              <td><input id="btn" type="button" value="확인"/></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <div id="fixedbar">
+      <h3>고정 메뉴</h3>
+      <p>메뉴</p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+      <p>메뉴</p>
+    </div>
+    <div id="bot">
+      <audio src="Kalimba.mp3" controls autoplay loop></audio>
+      <span>
+        <a href="http://www.yu.ac.kr"><i><b>영남대학교</b></i></a>
+        <span><i><b> 기계IT대학 </b></i></span>
+        <a href="http://cse.yu.ac.kr"><i><b>컴퓨터공학과</b></i></a>
+      </span>
+    </div>
+    <footer align="center">
+      <img src="http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png">
+    </footer>
+  </body>
+</html>
