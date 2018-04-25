@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+    nav, ul {
+      padding: 0px;
+      margin: 0px;
+      border: 1px;
+      list-style: none;
+    }
+    li {
+      padding-left: 20ox;
+      border: 1px;
+    }
+    nav ul {
+      margin: 5px;
+      display: block;
+    }
+    nav > ul ul {
+      display: none;
+    }
+    nav > ul > li{
+      z-index: 5;
+    }
+    ul > li > ul > li {
+      z-index: 10;
+    }
+
+
+    </style>
+
+    <script>
+        function show(clicked_id){
+          var con;
+          if(clicked_id=="one"){
+            con = document.getElementById('listOne');
+          }
+          else if(clicked_id=='two'){
+            con = document.getElementById('listTwo');
+          }
+          else if(clicked_id=="three"){
+            con = document.getElementById('listThree');
+          }
+          else {
+            alert(clicked_id);
+          }
+
+          if(con.style.display==""){
+            con.style.display="inline-block";
+          }
+          else{
+            con.style.display="";
+          }
+        };
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul class="entire">
+        <li>
+          <a href="javascript:void(0);" id="one" onclick="show(this.id)"> 1번 </a>
+          <ul id="listOne">
+            <li><a href="">1-1번 메뉴</a></li>
+            <li><a href="">1-2번 메뉴</a></li>
+            <li><a href="">1-3번 메뉴</a></li>
+            <li><a href="">1-4번 메뉴</a></li>
+          </ul>
+        </li>
+
+        <li><a href="javascript:void(0);" id="two" onclick="show(this.id)"> 2번 </a>
+          <ul id="listTwo">
+            <li><a href="">2-1번 메뉴</a></li>
+            <li><a href="">2-2번 메뉴</a></li>
+            <li><a href="">2-3번 메뉴</a></li>
+          </ul>
+        </li>
+
+        <li><a href="javascript:void(0);" id="three" onclick="show(this.id)"> 3번 </a>
+          <ul id="listThree">
+            <li><a href="">3-1번 메뉴</a></li>
+            <li><a href="">3-2번 메뉴</a></li>
+            <li><a href="">3-3번 메뉴</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
