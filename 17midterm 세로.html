@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>21311828_신송정</title>
+    <style>
+      body{
+        width: 800px;
+      }
+      *{
+        margin:0;
+        padding: 0;
+      }
+      #header{
+        border-radius: 20px 20px 20px 20px;
+        background-color: red;
+      }
+      #header h1{
+        color : blue;
+        text-align: center;
+      }
+      #header h3{
+        color : white;
+        text-align: right;
+      }
+      #header:hover{
+        background-color: black;
+      }
+      #header:hover *{
+        color: white;
+      }
+      #header:active *{
+        color : yellow;
+      }
+      #main{
+        background-color: yellow;
+      }
+      #submain{
+        margin-left: 300px;
+      }
+      #middle{
+        overflow: hidden;
+      }
+      #text{
+        float: right;
+      }
+      #audio{
+        float:left;
+      }
+      #fixedm{
+        position: fixed;
+        background-color: orange;
+        top:100px;
+        left:900px;
+        width:100px;
+      }
+      #sidem{
+        position: absolute;
+        background-color: green;
+        top:277px;
+        left:000px;
+        width:126px;
+        z-index: 0;
+      }
+      #sidem h3{
+        color:white;
+      }
+      nav, li , ul{
+        margin : 0;
+        padding : 0;
+        list-style: none;
+        width : 100px;
+      }
+      nav ul{
+        display: inline-block;
+      }
+      nav>ul>li>a{
+        text-decoration: none;
+        color : blue;
+      }
+      #HTML{
+        display : block;
+        padding : 10px;
+        border-radius:0px 0px 0px 0px;
+        border-style:dotted;
+        background-color: green;
+        border-color: red;
+        width : 100px;
+      }
+      #JAVASCRIPT{
+        display : block;
+        padding : 10px;
+        border-radius:0px 0px 0px 0px;
+        border-style:dotted;
+        background-color: red;
+        border-color: green;
+        width : 100px;
+      }
+      #CSS{
+        display : block;
+        padding : 10px;
+        border-radius:0px 0px 0px 0px;
+        border-style:dotted;
+        background-color: green;
+        border-color: red;
+        width : 100px;
+      }
+      #jQuery{
+        display : block;
+        padding : 10px;
+        border-radius:0px 0px 0px 0px;
+        border-style:dotted;
+        background-color: red;
+        border-color: green;
+        width : 100px;
+      }
+
+      nav>ul ul{
+        display : none;
+        position: absolute;
+        margin-left: 115px;
+        background-color: white;
+        z-index: 100;
+      }
+      nav ul>li#HTML:hover ul{
+        display: block;
+      }
+      nav ul>li#JAVASCRIPT:hover ul{
+        display: block;
+      }
+      nav ul>li#CSS:hover ul{
+        display: block;
+      }
+      nav ul>li#jQuery:hover ul{
+        display: block;
+      }
+    </style>
+    <script>
+      window.onload=function(){
+        var clock  =document.getElementById('clock');
+        setInterval(function(){
+          var now = new Date();
+          var target = new Date('4/26/2018 11:00:00');
+          var answer = (target.getTime()-now.getTime())/(1000*60);
+          answer=parseInt(answer.toString(),0);
+          clock.innerHTML=answer;
+        },1000);
+
+        intro.onclick = function(){
+          if(intro.style.color == 'red'){
+            intro.style.color = "black";
+          }
+          else {
+            intro.style.color='red';
+          }
+        };
+        intro2.onclick = function(){
+          if(intro2.style.color == 'red'){
+            intro2.style.color = "black";
+          }
+          else {
+            intro2.style.color='red';
+          }
+        };
+        intro3.onclick = function(){
+          if(intro3.style.color == 'red'){
+            intro3.style.color = "black";
+          }
+          else {
+            intro3.style.color='red';
+          }
+        };
+        wsced.onclick = function(){
+          msced1.style.color = 'red';
+          msced2.style.color = 'black';
+          msced3.style.color = 'black';
+        };
+        wsced2.onclick = function(){
+          msced2.style.color = 'red';
+          msced1.style.color = 'black';
+          msced3.style.color = 'black';
+        };
+        wsced3.onclick = function(){
+          msced3.style.color = 'red';
+          msced2.style.color = 'black';
+          msced1.style.color = 'black';
+        };
+      };
+      function hera()
+      {
+        var cmd = document.getElementById('cmd').value;
+        if(cmd == '웹프로그래밍1')
+        {
+          intro.style.color='red';
+        }
+        else if(cmd == '웹프로그래밍2')
+        {
+          intro2.style.color='red';
+        }
+        else if(cmd == '웹프로그래밍3')
+        {
+          intro3.style.color='red';
+        }
+        else if(cmd == '웹프로그래밍일정1')
+        {
+          msced1.style.color = 'red';
+          msced2.style.color = 'black';
+          msced3.style.color = 'black';
+        }
+        else if(cmd == '웹프로그래밍일정1')
+        {
+          msced2.style.color = 'red';
+          msced1.style.color = 'black';
+          msced3.style.color = 'black';
+        }
+        else if(cmd == '웹프로그래밍일정3')
+        {
+          msced3.style.color = 'red';
+          msced2.style.color = 'black';
+          msced1.style.color = 'black';
+        }
+        else if(cmd == '녹색')
+        {
+          header.style.backgroundColor='green';
+        }
+        else if(cmd == '초기화')
+        {
+          header.style.backgroundColor='';
+        }
+        else{
+          alert("없는 명령");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id = "header">
+    <h1><font size = "7">웹프로그래밍 중간고사</font></h1>
+    <h3>시험 종료까지 남은 시간:<span id = 'clock'></span>분</h3>
+    </div>
+    <div id ="inc">
+    <nav>
+    <ul>
+      <li id = "HTML"><a href="">HTML</a>
+        <ul>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li id = "JAVASCRIPT"><a href="">JAVASCRIPT</a>
+        <ul>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li id = "CSS"><a href="">CSS</a>
+        <ul>
+        <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+      <li id = "jQuery"><a href="">jQuery</a>
+        <ul>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        <li>풀다운 메뉴</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <div id = "main">
+    <div id = "submain">
+    <h3 id = "intro">웹프로그래밍 소개</h3>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+    <h3 id = "intro2">웹프로그래밍 소개</h3>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+    <h3 id = "intro3">웹프로그래밍 소개</h3>
+    <p>HTML + JAVASCRIPT + CSS + jQuery</p>
+
+    <h3 id = "wsced">웹프로그래밍 수업 일정</h3>
+    <p id = "msced1">HTML 1주<br>JAVASCRIPT 2주<br>CSS 2주<br>jQuery 2주</p>
+    <h3 id = "wsced2">웹프로그래밍 수업 일정</h3>
+    <p id = "msced2">HTML 1주<br>JAVASCRIPT 2주<br>CSS 2주<br>jQuery 2주</p>
+    <h3 id = "wsced3">웹프로그래밍 수업 일정</h3>
+    <p id = "msced3">HTML 1주<br>JAVASCRIPT 2주<br>CSS 2주<br>jQuery 2주</p>
+
+    <form>
+      <table>
+        <tr>
+          <td>명령 <input type="text" id = "cmd"></td><td>
+            <select>
+              <optgroup label="최근 3년">
+                <option>2017년</option>
+                <option>2016년</option>
+                <option>2015년</option>
+              </optgroup>
+              <optgroup label="미래">
+                <option>2018년</option>
+                <option>2019년</option>
+                <option>2020년</option>
+              </optgroup>
+            </select>
+          </td><td>
+            <button type="button" onclick = "hera();">확인</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    </div>
+    </div>
+
+    <div id = "sidem">
+    <h3>사이드 메뉴</h3>
+    <p>메뉴<br>메뉴<br>메뉴<br>메뉴</p>
+    </div>
+
+    <div id = "fixedm">
+    <h3>고정 메뉴</h3>
+    <p>메뉴<br>메뉴<br>메뉴<br>메뉴<br>메뉴</p>
+    </div>
+
+    <div id = "middle">
+    <div id = "text"><p><i><a href="http://www.yu.ac.kr">영남대학교</a> 기계IT대학 <a href="http://cse.yu.ac.kr">컴퓨터공학과</a></i></p></div>
+    <div id = "audio"><audio src="music.mp3" controls="controls"></audio></div>
+    </div>
+    <footer>
+      <center>
+      <img src="http://www.yu.ac.kr/_korean/_image-2017/yu_logo.png" alt="yuimg">
+    </center>
+    </footer>
+  </body>
+</html>
