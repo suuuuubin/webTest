@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <script type="text/javascript">
+      function ok(){
+        var select=document.getElementById('select').value;
+        var st=document.getElementById('st').value;
+        var textBox=document.getElementById('textBox').value;
+        var nst = document.getElementById('nst').value;
+        var divi = document.getElementById('divi').value;
+
+
+        // alert(select);
+        // alert(st);
+        // alert(textBox);
+        // alert(nst);
+        // alert(divi);
+        // var temp=document.getElementById('title1');
+        // temp.style.color="#ff0000";
+        if(select=='mod'){
+            if(st=='color'){
+                if(nst=='first'){
+                  if(divi=='title'){
+                    var temp=document.getElementById('title1');
+                    temp.style.color=textBox;
+                  }
+                  else if(divi=='body'){
+                    var temp=document.getElementById('body1');
+                    temp.style.color=textBox;
+                  }
+                }
+                else if(nst=='last'){
+                  if(divi=='title'){
+                    var temp=document.getElementById('title5');
+                    temp.style.color=textBox;
+                  }
+                  else if(divi=='body'){
+                    var temp=document.getElementById('body5');
+                    temp.style.color=textBox;
+                  }
+                }
+                else if(nst=='even'){
+                  if(divi=='title'){
+                    var temp1=document.getElementById('title2');
+                    var temp2=document.getElementById('title4');
+                    temp1.style.color=textBox;
+                    temp2.style.color=textBox;
+                  }
+                  else if(divi=='body'){
+                    var temp1=document.getElementById('body2');
+                    var temp2=document.getElementById('body4');
+                    temp1.style.color=textBox;
+                    temp2.style.color=textBox;
+                  }
+                }
+                else if(nst=='odd'){
+                  if(divi=='title'){
+                    var temp1=document.getElementById('title1');
+                    temp1.style.color=textBox;
+                    var temp2=document.getElementById('title3');
+                    temp2.style.color=textBox;
+                    var temp3=document.getElementById('title5');
+                    temp3.style.color=textBox;
+
+                  }
+                  else if(divi=='body'){
+                    var temp1=document.getElementById('body1');
+                    var temp2=document.getElementById('body3');
+                    var temp3=document.getElementById('body5');
+                    temp1.style.color=textBox;
+                    temp2.style.color=textBox;
+                    temp3.style.color=textBox;
+                  }
+
+                }
+                else if(nst=='all'){
+                  if(divi=='title'){
+                    var temp1=document.getElementById('title1');
+                    temp1.style.color=textBox;
+                    var temp2=document.getElementById('title2');
+                    temp2.style.color=textBox;
+                    var temp3=document.getElementById('title3');
+                    temp3.style.color=textBox;
+                    var temp4=document.getElementById('title4');
+                    temp4.style.color=textBox;
+                    var temp5=document.getElementById('title5');
+                    temp5.style.color=textBox;
+                  }
+                  else if(divi=='body'){
+                    var temp1=document.getElementById('body1');
+                    var temp2=document.getElementById('body2');
+                    var temp3=document.getElementById('body3');
+                    var temp4=document.getElementById('body4');
+                    var temp5=document.getElementById('body5');
+                    temp1.style.color=textBox;
+                    temp2.style.color=textBox;
+                    temp3.style.color=textBox;
+                    temp4.style.color=textBox;
+                    temp5.style.color=textBox;
+                  }
+                }
+            }
+            else if(st=='bgColor'){
+              if(nst=='first'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title1');
+                  temp.style.backgroundColor=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body1');
+                  temp.style.backgroundColor=textBox;
+                }
+              }
+              else if(nst=='last'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title5');
+                  temp.style.backgroundColor=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body5');
+                  temp.style.backgroundColor=textBox;
+                }
+              }
+              else if(nst=='even'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title2');
+                  var temp2=document.getElementById('title4');
+                  temp1.style.backgroundColor=textBox;
+                  temp2.style.backgroundColor=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body2');
+                  var temp2=document.getElementById('body4');
+                  temp1.style.backgroundColor=textBox;
+                  temp2.style.backgroundColor=textBox;
+                }
+              }
+              else if(nst=='odd'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.style.backgroundColor=textBox;
+                  var temp2=document.getElementById('title3');
+                  temp2.style.backgroundColor=textBox;
+                  var temp3=document.getElementById('title5');
+                  temp3.style.backgroundColor=textBox;
+
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body3');
+                  var temp3=document.getElementById('body5');
+                  temp1.style.backgroundColor=textBox;
+                  temp2.style.backgroundColor=textBox;
+                  temp3.style.backgroundColor=textBox;
+                }
+
+              }
+              else if(nst=='all'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.style.backgroundColor=textBox;
+                  var temp2=document.getElementById('title2');
+                  temp2.style.backgroundColor=textBox;
+                  var temp3=document.getElementById('title3');
+                  temp3.style.backgroundColor=textBox;
+                  var temp4=document.getElementById('title4');
+                  temp4.style.backgroundColor=textBox;
+                  var temp5=document.getElementById('title5');
+                  temp5.style.backgroundColor=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body2');
+                  var temp3=document.getElementById('body3');
+                  var temp4=document.getElementById('body4');
+                  var temp5=document.getElementById('body5');
+                  temp1.style.backgroundColor=textBox;
+                  temp2.style.backgroundColor=textBox;
+                  temp3.style.backgroundColor=textBox;
+                  temp4.style.backgroundColor=textBox;
+                  temp5.style.backgroundColor=textBox;
+                }
+              }
+            }
+            else if(st=='text'){
+              if(nst=='first'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title1');
+                  temp.innerHTML=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body1');
+                  temp.innerHTML=textBox;
+                }
+              }
+              else if(nst=='last'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title5');
+                  temp.innerHTML=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body5');
+                  temp.innerHTML=textBox;
+                }
+              }
+              else if(nst=='even'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title2');
+                  var temp2=document.getElementById('title4');
+                  temp1.innerHTML=textBox;
+                  temp2.innerHTML=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body2');
+                  var temp2=document.getElementById('body4');
+                  temp1.innerHTML=textBox;
+                  temp2.innerHTML=textBox;
+                }
+              }
+              else if(nst=='odd'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.innerHTML=textBox;
+                  var temp2=document.getElementById('title3');
+                  temp2.innerHTML=textBox;
+                  var temp3=document.getElementById('title5');
+                  temp3.innerHTML=textBox;
+
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body3');
+                  var temp3=document.getElementById('body5');
+                  temp1.innerHTML=textBox;
+                  temp2.innerHTML=textBox;
+                  temp3.innerHTML=textBox;
+                }
+
+              }
+              else if(nst=='all'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.innerHTML=textBox;
+                  var temp2=document.getElementById('title2');
+                  temp2.innerHTML=textBox;
+                  var temp3=document.getElementById('title3');
+                  temp3.innerHTML=textBox;
+                  var temp4=document.getElementById('title4');
+                  temp4.innerHTML=textBox;
+                  var temp5=document.getElementById('title5');
+                  temp5.innerHTML=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body2');
+                  var temp3=document.getElementById('body3');
+                  var temp4=document.getElementById('body4');
+                  var temp5=document.getElementById('body5');
+                  temp1.innerHTML=textBox;
+                  temp2.innerHTML=textBox;
+                  temp3.innerHTML=textBox;
+                  temp4.innerHTML=textBox;
+                  temp5.innerHTML=textBox;
+                }
+              }
+            }
+        }
+        else if(select=='del'){
+          textBox="";
+          if(st=='color'){
+              if(nst=='first'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title1');
+                  temp.style.color=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body1');
+                  temp.style.color=textBox;
+                }
+              }
+              else if(nst=='last'){
+                if(divi=='title'){
+                  var temp=document.getElementById('title5');
+                  temp.style.color=textBox;
+                }
+                else if(divi=='body'){
+                  var temp=document.getElementById('body5');
+                  temp.style.color=textBox;
+                }
+              }
+              else if(nst=='even'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title2');
+                  var temp2=document.getElementById('title4');
+                  temp1.style.color=textBox;
+                  temp2.style.color=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body2');
+                  var temp2=document.getElementById('body4');
+                  temp1.style.color=textBox;
+                  temp2.style.color=textBox;
+                }
+              }
+              else if(nst=='odd'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.style.color=textBox;
+                  var temp2=document.getElementById('title3');
+                  temp2.style.color=textBox;
+                  var temp3=document.getElementById('title5');
+                  temp3.style.color=textBox;
+
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body3');
+                  var temp3=document.getElementById('body5');
+                  temp1.style.color=textBox;
+                  temp2.style.color=textBox;
+                  temp3.style.color=textBox;
+                }
+
+              }
+              else if(nst=='all'){
+                if(divi=='title'){
+                  var temp1=document.getElementById('title1');
+                  temp1.style.color=textBox;
+                  var temp2=document.getElementById('title2');
+                  temp2.style.color=textBox;
+                  var temp3=document.getElementById('title3');
+                  temp3.style.color=textBox;
+                  var temp4=document.getElementById('title4');
+                  temp4.style.color=textBox;
+                  var temp5=document.getElementById('title5');
+                  temp5.style.color=textBox;
+                }
+                else if(divi=='body'){
+                  var temp1=document.getElementById('body1');
+                  var temp2=document.getElementById('body2');
+                  var temp3=document.getElementById('body3');
+                  var temp4=document.getElementById('body4');
+                  var temp5=document.getElementById('body5');
+                  temp1.style.color=textBox;
+                  temp2.style.color=textBox;
+                  temp3.style.color=textBox;
+                  temp4.style.color=textBox;
+                  temp5.style.color=textBox;
+                }
+              }
+          }
+          else if(st=='bgColor'){
+            if(nst=='first'){
+              if(divi=='title'){
+                var temp=document.getElementById('title1');
+                temp.style.backgroundColor=textBox;
+              }
+              else if(divi=='body'){
+                var temp=document.getElementById('body1');
+                temp.style.backgroundColor=textBox;
+              }
+            }
+            else if(nst=='last'){
+              if(divi=='title'){
+                var temp=document.getElementById('title5');
+                temp.style.backgroundColor=textBox;
+              }
+              else if(divi=='body'){
+                var temp=document.getElementById('body5');
+                temp.style.backgroundColor=textBox;
+              }
+            }
+            else if(nst=='even'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title2');
+                var temp2=document.getElementById('title4');
+                temp1.style.backgroundColor=textBox;
+                temp2.style.backgroundColor=textBox;
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body2');
+                var temp2=document.getElementById('body4');
+                temp1.style.backgroundColor=textBox;
+                temp2.style.backgroundColor=textBox;
+              }
+            }
+            else if(nst=='odd'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title1');
+                temp1.style.backgroundColor=textBox;
+                var temp2=document.getElementById('title3');
+                temp2.style.backgroundColor=textBox;
+                var temp3=document.getElementById('title5');
+                temp3.style.backgroundColor=textBox;
+
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body1');
+                var temp2=document.getElementById('body3');
+                var temp3=document.getElementById('body5');
+                temp1.style.backgroundColor=textBox;
+                temp2.style.backgroundColor=textBox;
+                temp3.style.backgroundColor=textBox;
+              }
+
+            }
+            else if(nst=='all'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title1');
+                temp1.style.backgroundColor=textBox;
+                var temp2=document.getElementById('title2');
+                temp2.style.backgroundColor=textBox;
+                var temp3=document.getElementById('title3');
+                temp3.style.backgroundColor=textBox;
+                var temp4=document.getElementById('title4');
+                temp4.style.backgroundColor=textBox;
+                var temp5=document.getElementById('title5');
+                temp5.style.backgroundColor=textBox;
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body1');
+                var temp2=document.getElementById('body2');
+                var temp3=document.getElementById('body3');
+                var temp4=document.getElementById('body4');
+                var temp5=document.getElementById('body5');
+                temp1.style.backgroundColor=textBox;
+                temp2.style.backgroundColor=textBox;
+                temp3.style.backgroundColor=textBox;
+                temp4.style.backgroundColor=textBox;
+                temp5.style.backgroundColor=textBox;
+              }
+            }
+          }
+          else if(st=='text'){
+            if(nst=='first'){
+              if(divi=='title'){
+                var temp=document.getElementById('title1');
+                temp.innerHTML=textBox;
+              }
+              else if(divi=='body'){
+                var temp=document.getElementById('body1');
+                temp.innerHTML=textBox;
+              }
+            }
+            else if(nst=='last'){
+              if(divi=='title'){
+                var temp=document.getElementById('title5');
+                temp.innerHTML=textBox;
+              }
+              else if(divi=='body'){
+                var temp=document.getElementById('body5');
+                temp.innerHTML=textBox;
+              }
+            }
+            else if(nst=='even'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title2');
+                var temp2=document.getElementById('title4');
+                temp1.innerHTML=textBox;
+                temp2.innerHTML=textBox;
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body2');
+                var temp2=document.getElementById('body4');
+                temp1.innerHTML=textBox;
+                temp2.innerHTML=textBox;
+              }
+            }
+            else if(nst=='odd'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title1');
+                temp1.innerHTML=textBox;
+                var temp2=document.getElementById('title3');
+                temp2.innerHTML=textBox;
+                var temp3=document.getElementById('title5');
+                temp3.innerHTML=textBox;
+
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body1');
+                var temp2=document.getElementById('body3');
+                var temp3=document.getElementById('body5');
+                temp1.innerHTML=textBox;
+                temp2.innerHTML=textBox;
+                temp3.innerHTML=textBox;
+              }
+
+            }
+            else if(nst=='all'){
+              if(divi=='title'){
+                var temp1=document.getElementById('title1');
+                temp1.innerHTML=textBox;
+                var temp2=document.getElementById('title2');
+                temp2.innerHTML=textBox;
+                var temp3=document.getElementById('title3');
+                temp3.innerHTML=textBox;
+                var temp4=document.getElementById('title4');
+                temp4.innerHTML=textBox;
+                var temp5=document.getElementById('title5');
+                temp5.innerHTML=textBox;
+              }
+              else if(divi=='body'){
+                var temp1=document.getElementById('body1');
+                var temp2=document.getElementById('body2');
+                var temp3=document.getElementById('body3');
+                var temp4=document.getElementById('body4');
+                var temp5=document.getElementById('body5');
+                temp1.innerHTML=textBox;
+                temp2.innerHTML=textBox;
+                temp3.innerHTML=textBox;
+                temp4.innerHTML=textBox;
+                temp5.innerHTML=textBox;
+              }
+            }
+          }
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+
+    <h2 id="title1"> First Title </h1>
+    <p id="body1"> First Body <p>
+    <h2 id="title2"> Second Title </h1>
+    <p id="body2"> Second Body <p>
+    <h2 id="title3"> Third Title </h1>
+    <p id="body3"> Third Body <p>
+    <h2 id="title4"> Forth Title </h1>
+    <p id="body4"> Forth Body <p>
+    <h2 id="title5"> Fifth Title </h1>
+    <p id="body5"> Fifth Body <p>
+    <form >
+      <b>CMD</b>
+      <select id="select" class="select" name="">
+      <option value="mod">Modify</option>
+      <option value="del">Delete</option>
+      </select>
+
+      <select id="st" class="st" name="">
+        <option value="color">Color</option>
+        <option value="bgColor">BG-Color</option>
+        <option value="text">Text</option>
+      </select>
+      to
+        <input type="text" id="textBox"/>
+      where
+
+      </select>
+      <select id="nst" class="nst" name="">
+        <option value="first">First</option>
+        <option value="last">Last</option>
+        <option value="even">Even</option>
+        <option value="odd">Odd</option>
+        <option value="all">All</option>
+      </select>
+      <select id="divi" class="divi" name="">
+        <option value="title">Title</option>
+        <option value="body">Body</option>
+      </select>
+      <button type="button" value="OK" onclick="ok();">OK</button>
+    </form>
+  </body>
+
+</html>

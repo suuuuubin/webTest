@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    window.onload = function(){
+      var htmlDays = document.getElementById('days');
+      var htmlHours = document.getElementById('hours');
+      var now = new Date();
+      var target = new Date('6/15/2018 13:00:00');
+      var days = (target.getTime()-now.getTime())/((1000*60*60*24));
+      var temp=days*24;
+      var hours = temp - (target.getTime()-now.getTime())/(1000*60*60);
+      hours = parseInt(hours.toString());
+      days = parseInt(days.toString());
+      htmlDays.innerHTML = days;
+      htmlHours.innerHTML = hours;
+
+      setInterval(function() {
+         now = new Date();
+         target = new Date('6/15/2018 13:00:00');
+         days = (target.getTime()-now.getTime())/((1000*60*60*24));
+         temp=days*24;
+         hours = temp - (target.getTime()-now.getTime())/(1000*60*60);
+        hours = parseInt(hours.toString());
+        days = parseInt(days.toString());
+        htmlDays.innerHTML = days;
+        htmlHours.innerHTML = hours;
+        alert(now.getTime());
+      }, 300000);
+    };
+
+
+      // window.onload = function(){
+      //       var clock = document.getElementById('clock');
+      //       setInterval(function() {
+      //       var now = new Date();
+      //       var target = new Date('4/26/2018 16:00:00');
+      //       var answer = (target.getTime()-now.getTime())/(1000*60);
+      //       answer = parseInt(answer.toString(),0);
+      //       alert(answer);          }, 1000);
+      //   };
+      </script>
+  </head>
+  <body>
+    <p> <b><span id="days"></span></b> Days and <b><span id="hours"></span></b> Hours remain to 13:00, 15th June 2018 </p>
+  </body>
+
+</html>
